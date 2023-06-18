@@ -1,0 +1,3 @@
+python-docx
+farsi-tools
+openpyxl
