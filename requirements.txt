@@ -1,3 +1,4 @@
 python-docx
 farsi-tools
 openpyxl
+re

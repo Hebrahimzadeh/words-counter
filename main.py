@@ -25,7 +25,7 @@ def get_doc_text(doc_file):
     return '\n'.join(fullText)
 
 def count_word(word, text):
-    return text.count(word)
+    return len(re.findall(r"\b%s\b" % word, text))
 
 
 if __name__ == '__main__':
