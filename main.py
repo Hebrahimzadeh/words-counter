@@ -9,7 +9,7 @@ import openpyxl
 
 
 def doc_files(path):
-    files = [filename for filename in os.listdir(path) if filename.rstrip('.docx')]
+    files = [filename for filename in os.listdir(path) if filename.endswith('.docx')]
     return files
 
 def getTags(file_path = 'tags.txt'):
@@ -44,6 +44,7 @@ if __name__ == '__main__':
         file_tags = {}
         file_text = get_doc_text(file_path + '/' + file)
         for tag in tags:
+            
             if tag not in total_tags_count:
                 total_tags_count[tag] = 0
             if tag not in total_tag_count_in_files:
